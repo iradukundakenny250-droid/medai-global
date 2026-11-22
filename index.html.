@@ -1,0 +1,256 @@
+here
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEDAI GLOBAL - Your World. Your Intelligence.">
+<meta name="theme-color" content="#080d1a">
+<title>MEDAI GLOBAL - AI for Everyone</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080d1a;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #25304a;
+}
+
+.logo {
+  color: #55aaff;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: white;
+}
+
+.status {
+  color: #49d69b;
+  font-size: 12px;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 25px 18px;
+}
+
+.welcome {
+  text-align: center;
+  margin: 65px 0 40px;
+}
+
+.welcome h1 {
+  font-size: 35px;
+}
+
+.welcome h1 span {
+  color: #55aaff;
+}
+
+.welcome p {
+  color: #aab5ca;
+  line-height: 1.7;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.feature {
+  background: #121d32;
+  border: 1px solid #253653;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.feature h3 {
+  color: #55aaff;
+  margin-top: 5px;
+}
+
+.feature p {
+  color: #aab5ca;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.chat-title {
+  margin-top: 45px;
+  color: #55aaff;
+}
+
+.chat {
+  min-height: 180px;
+  padding: 15px;
+  background: #0e1728;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.message {
+  background: #17233b;
+  padding: 14px;
+  border-radius: 12px;
+  margin: 12px 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.user {
+  background: #174b82;
+  margin-left: 25px;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  background: #151e32;
+  padding: 10px;
+  border: 1px solid #34415c;
+  border-radius: 14px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  background: #2588ed;
+  color: white;
+  border: none;
+  padding: 12px 17px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  color: #71809b;
+  padding: 35px 10px;
+  font-size: 12px;
+}
+
+@media (max-width: 500px) {
+  .welcome h1 {
+    font-size: 27px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MEDAI <span>GLOBAL</span></div>
+  <div class="status">● Online</div>
+</header>
+
+<main>
+
+<section class="welcome">
+  <h1>Welcome to <span>MEDAI GLOBAL</span></h1>
+  <p>
+    Your World. Your Intelligence.<br>
+    One AI platform for everyone, everywhere.
+  </p>
+</section>
+
+<section class="features">
+
+  <div class="feature">
+    <h3>AI Assistant</h3>
+    <p>Get help with questions, ideas and everyday tasks.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Global Languages</h3>
+    <p>Explore a world of multilingual communication.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Creative Studio</h3>
+    <p>Discover tools for creativity and innovation.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Smart Technology</h3>
+    <p>A new way to interact with intelligent technology.</p>
+  </div>
+
+</section>
+
+<h2 class="chat-title">Talk to MEDAI</h2>
+
+<section class="chat" id="chat">
+  <div class="message">
+    Welcome to MEDAI GLOBAL! Your AI journey starts here.
+    What would you like to explore today?
+  </div>
+</section>
+
+<div class="input-area">
+  <input id="prompt" placeholder="Ask MEDAI anything...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+</main>
+
+<footer>
+  MEDAI GLOBAL © 2026<br>
+  Intelligence Without Borders
+</footer>
+
+<script>
+function sendMessage() {
+  const input = document.getElementById("prompt");
+  const chat = document.getElementById("chat");
+  const message = input.value.trim();
+
+  if (!message) return;
+
+  const userMessage = document.createElement("div");
+  userMessage.className = "message user";
+  userMessage.textContent = message;
+  chat.appendChild(userMessage);
+
+  const reply = document.createElement("div");
+  reply.className = "message";
+  reply.textContent =
+    "Thank you for using MEDAI GLOBAL! Our AI engine is not connected yet. We are building it step by step.";
+
+  chat.appendChild(reply);
+  input.value = "";
+}
+</script>
+
+</body>
+</html>
