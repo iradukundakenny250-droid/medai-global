@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEDAI GLOBAL</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080d1a;
+  color: white;
+}
+header {
+  padding: 20px;
+  border-bottom: 1px solid #25304a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #55aaff;
+}
+.logo span { color: white; }
+.status { color: #49d69b; font-size: 12px; }
+main {
+  max-width: 750px;
+  margin: auto;
+  padding: 35px 18px;
+}
+.welcome { text-align: center; margin: 55px 0 35px; }
+.welcome h1 { font-size: 32px; }
+.welcome h1 span { color: #55aaff; }
+.welcome p { color: #aab5ca; line-height: 1.6; }
+.chat {
+  min-height: 260px;
+  padding: 15px;
+  margin-bottom: 18px;
+}
+.message {
+  background: #17233b;
+  padding: 14px;
+  border-radius: 14px;
+  margin: 12px 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.user { background: #174b82; margin-left: 30px; }
+.input-area {
+  display: flex;
+  gap: 9px;
+  background: #151e32;
+  padding: 10px;
+  border: 1px solid #34415c;
+  border-radius: 15px;
+}
+input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+button {
+  background: #2588ed;
+  border: none;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  color: #71809b;
+  padding: 30px 10px;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MEDAI <span>GLOBAL</span></div>
+  <div class="status">● Online</div>
+</header>
+
+<main>
+  <section class="welcome">
+    <h1>Hello, welcome to <span>MEDAI</span></h1>
+    <p>Your World. Your Intelligence.<br>
+    Discover a new way to interact with AI.</p>
+  </section>
+
+  <section class="chat" id="chat">
+    <div class="message">
+      Welcome to MEDAI GLOBAL! I am your AI assistant interface. How can I help you today?
+    </div>
+  </section>
+
+  <div class="input-area">
+    <input id="prompt" placeholder="Ask MEDAI anything...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</main>
+
+<footer>
+  MEDAI GLOBAL © 2026 — Intelligence Without Borders
+</footer>
+
+<script>
+function sendMessage() {
+  const input = document.getElementById("prompt");
+  const chat = document.getElementById("chat");
+  const message = input.value.trim();
+
+  if (!message) return;
+
+  const userMessage = document.createElement("div");
+  userMessage.className = "message user";
+  userMessage.textContent = message;
+  chat.appendChild(userMessage);
+
+  const reply = document.createElement("div");
+  reply.className = "message";
+  reply.textContent = "Thank you for trying MEDAI GLOBAL! The AI engine is not connected yet. We are building it step by step.";
+  chat.appendChild(reply);
+
+  input.value = "";
+}
+</script>
+
+</body>
+</html>
