@@ -1,256 +1,43 @@
-here
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MEDAI GLOBAL - Your World. Your Intelligence.">
-<meta name="theme-color" content="#080d1a">
-<title>MEDAI GLOBAL - AI for Everyone</title>
-
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071a3a"><link rel="manifest" href="manifest.json">
+<title>MEDAI GLOBAL</title>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #080d1a;
-  color: white;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #25304a;
-}
-
-.logo {
-  color: #55aaff;
-  font-size: 23px;
-  font-weight: bold;
-}
-
-.logo span {
-  color: white;
-}
-
-.status {
-  color: #49d69b;
-  font-size: 12px;
-}
-
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 25px 18px;
-}
-
-.welcome {
-  text-align: center;
-  margin: 65px 0 40px;
-}
-
-.welcome h1 {
-  font-size: 35px;
-}
-
-.welcome h1 span {
-  color: #55aaff;
-}
-
-.welcome p {
-  color: #aab5ca;
-  line-height: 1.7;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin: 30px 0;
-}
-
-.feature {
-  background: #121d32;
-  border: 1px solid #253653;
-  border-radius: 14px;
-  padding: 18px;
-}
-
-.feature h3 {
-  color: #55aaff;
-  margin-top: 5px;
-}
-
-.feature p {
-  color: #aab5ca;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.chat-title {
-  margin-top: 45px;
-  color: #55aaff;
-}
-
-.chat {
-  min-height: 180px;
-  padding: 15px;
-  background: #0e1728;
-  border-radius: 15px;
-  margin-bottom: 15px;
-}
-
-.message {
-  background: #17233b;
-  padding: 14px;
-  border-radius: 12px;
-  margin: 12px 0;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.user {
-  background: #174b82;
-  margin-left: 25px;
-}
-
-.input-area {
-  display: flex;
-  gap: 8px;
-  background: #151e32;
-  padding: 10px;
-  border: 1px solid #34415c;
-  border-radius: 14px;
-}
-
-input {
-  flex: 1;
-  min-width: 0;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 16px;
-}
-
-button {
-  background: #2588ed;
-  color: white;
-  border: none;
-  padding: 12px 17px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  color: #71809b;
-  padding: 35px 10px;
-  font-size: 12px;
-}
-
-@media (max-width: 500px) {
-  .welcome h1 {
-    font-size: 27px;
-  }
-
-  .features {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">MEDAI <span>GLOBAL</span></div>
-  <div class="status">● Online</div>
-</header>
-
-<main>
-
-<section class="welcome">
-  <h1>Welcome to <span>MEDAI GLOBAL</span></h1>
-  <p>
-    Your World. Your Intelligence.<br>
-    One AI platform for everyone, everywhere.
-  </p>
-</section>
-
-<section class="features">
-
-  <div class="feature">
-    <h3>AI Assistant</h3>
-    <p>Get help with questions, ideas and everyday tasks.</p>
-  </div>
-
-  <div class="feature">
-    <h3>Global Languages</h3>
-    <p>Explore a world of multilingual communication.</p>
-  </div>
-
-  <div class="feature">
-    <h3>Creative Studio</h3>
-    <p>Discover tools for creativity and innovation.</p>
-  </div>
-
-  <div class="feature">
-    <h3>Smart Technology</h3>
-    <p>A new way to interact with intelligent technology.</p>
-  </div>
-
-</section>
-
-<h2 class="chat-title">Talk to MEDAI</h2>
-
-<section class="chat" id="chat">
-  <div class="message">
-    Welcome to MEDAI GLOBAL! Your AI journey starts here.
-    What would you like to explore today?
-  </div>
-</section>
-
-<div class="input-area">
-  <input id="prompt" placeholder="Ask MEDAI anything...">
-  <button onclick="sendMessage()">Send</button>
-</div>
-
-</main>
-
-<footer>
-  MEDAI GLOBAL © 2026<br>
-  Intelligence Without Borders
-</footer>
-
+:root{--navy:#071a3a;--blue:#1769e0;--paper:#f4f8ff;--ink:#14213d;--muted:#71809a}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+header{background:linear-gradient(120deg,#061633,#123e83);color:white;padding:18px 16px 28px}
+.top,.hero,main{max-width:960px;margin-left:auto;margin-right:auto}.top{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:850;letter-spacing:.5px;display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#42d3ef,#2473f0);display:grid;place-items:center;font-size:23px}
+.status{font-size:12px;color:#b8e9ff;border:1px solid #3973ad;padding:6px 10px;border-radius:30px}
+.hero{margin-top:28px}.hero h1{font-size:clamp(29px,6vw,44px);margin:0 0 8px}.hero p{color:#d5e5ff;max-width:600px;line-height:1.5;margin:0}
+main{padding:20px 16px 40px}.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:20px}
+.tool,.chat{background:white;border:1px solid #e2eafa;border-radius:17px;box-shadow:0 7px 22px #102c5710}
+.tool{padding:15px}.tool b{display:block;margin:7px 0 3px}.tool small{color:var(--muted)}
+.chat{overflow:hidden}.chathead{padding:15px;border-bottom:1px solid #edf1f8;display:flex;gap:10px;align-items:center}
+.bot{width:38px;height:38px;border-radius:12px;background:#e8f4ff;display:grid;place-items:center;font-size:21px}.chathead small{display:block;color:#19945c;margin-top:3px}
+.messages{padding:16px;min-height:220px;max-height:48vh;overflow:auto;display:flex;flex-direction:column;gap:12px}
+.msg{padding:12px 14px;border-radius:15px;max-width:88%;line-height:1.45;font-size:14px;white-space:pre-wrap}.ai{background:#eef5ff;align-self:flex-start}.user{background:#1769e0;color:white;align-self:flex-end}
+.composer{display:flex;gap:8px;padding:12px;border-top:1px solid #edf1f8}input{min-width:0;flex:1;border:1px solid #dbe5f3;border-radius:13px;padding:13px;font:inherit}
+button{border:0;border-radius:13px;background:#1769e0;color:white;padding:0 18px;font-weight:700}
+.note{font-size:12px;color:#78869c;line-height:1.5;margin:12px 3px}footer{text-align:center;color:#8190a8;font-size:12px;padding:12px}
+@media(min-width:650px){.tools{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{margin-top:36px}}
+</style></head><body>
+<header><div class="top"><div class="brand"><div class="logo">✦</div>MEDAI GLOBAL</div><span class="status">● Prototype</span></div>
+<section class="hero"><h1>AI for everyone.</h1><p>Your global AI assistant starts here. Ask questions, explore ideas, and communicate across languages.</p></section></header>
+<main><section class="tools">
+<div class="tool">💬<b>AI Assistant</b><small>Ask questions and learn</small></div>
+<div class="tool">🌍<b>Languages</b><small>Designed for global users</small></div>
+<div class="tool">🎙️<b>Voice</b><small>Planned feature</small></div>
+<div class="tool">🖼️<b>Images</b><small>Planned feature</small></div>
+</section><section class="chat"><div class="chathead"><div class="bot">🤖</div><div><b>MEDAI Assistant</b><small>Demo mode — AI connection not added yet</small></div></div>
+<div class="messages" id="messages"><div class="msg ai">Muraho! Ndi MEDAI GLOBAL prototype. Andika ubutumwa bwawe kugira ngo tugerageze chat. Ibisubizo by'ubu ni demo; AI nyayo izongerwamo nyuma.</div></div>
+<form class="composer" id="form"><input id="prompt" autocomplete="off" placeholder="Andika ubutumwa..." aria-label="Andika ubutumwa"><button>Send</button></form></section>
+<p class="note">Iyi ni verisiyo yo kugerageza imiterere ya chat. Ntabwo irimo AI model ihujwe na internet. Ntukandike amakuru y'ibanga hano.</p></main>
+<footer>© MEDAI GLOBAL · Built step by step</footer>
 <script>
-function sendMessage() {
-  const input = document.getElementById("prompt");
-  const chat = document.getElementById("chat");
-  const message = input.value.trim();
-
-  if (!message) return;
-
-  const userMessage = document.createElement("div");
-  userMessage.className = "message user";
-  userMessage.textContent = message;
-  chat.appendChild(userMessage);
-
-  const reply = document.createElement("div");
-  reply.className = "message";
-  reply.textContent =
-    "Thank you for using MEDAI GLOBAL! Our AI engine is not connected yet. We are building it step by step.";
-
-  chat.appendChild(reply);
-  input.value = "";
-}
-</script>
-
-</body>
-</html>
+const f=document.getElementById('form'),i=document.getElementById('prompt'),m=document.getElementById('messages');
+function add(t,k){let d=document.createElement('div');d.className='msg '+k;d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight}
+f.addEventListener('submit',e=>{e.preventDefault();let v=i.value.trim();if(!v)return;add(v,'user');i.value='';setTimeout(()=>add('Murakoze kugerageza MEDAI GLOBAL. Iyi ni demo gusa; AI nyayo izasubiza nyuma yo guhuza AI engine na backend.','ai'),300)});
+if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script></body></html>
